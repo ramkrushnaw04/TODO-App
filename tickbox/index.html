@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tick Box</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            /* font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ; */
+        }
+
+        body{
+            /* border: 2px solid black; */
+            background-color: #5b6dff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .page{
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+            /* row-gap: 50px; */
+
+            align-items: center;
+            border: 2px solid black;
+            margin: 0 320px;
+            height: 780px;
+            /* width: 700px; */
+            position: relative;
+        }
+        
+        .heading{
+            text-align: center;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 28px;
+            /* padding: 55px 0; */
+            /* margin: 55px; */
+            /* background-color: red; */
+        }
+
+        .heading h1{
+            margin: 100px;
+        }
+
+        .container{
+            width: 600px;
+            /* background-color: teal; */
+            min-height: 510px;
+            display: flex;
+            flex-direction: column;
+            /* justify-content: center; */
+            align-items: center;
+            row-gap: 35px;
+            overflow:scroll;
+            /* padding-top: 150px; */
+            /* padding-right: 20px; */
+        }
+
+        .checkbox{
+            border: 2px solid #c394ff;
+            border-radius: 2px;
+            width: 30px;
+            height: 30px;
+            background-color: white;
+            color: white;
+        }
+
+        .info{
+            width: 60%;
+            height: 30px;
+            font-size: 22px;
+            border: 0px solid black;
+            border-bottom: 2px solid #c394ff;
+            overflow-wrap: break-word;
+            /* overflow: scroll; */
+        }
+
+        .info:focus{
+            border: 0px solid red;
+            border-color: white;
+            outline: none;
+            border-bottom: 2px solid #c394ff;
+            /* background-color: black; */
+        }
+
+        .task{
+            width: 80%;
+            display: flex;
+            position: relative;
+            align-items: center;
+            justify-content: center;
+            column-gap: 10px;
+            /* padding-right: 30px; */
+        }
+
+        .new-task{
+            position: absolute;
+            text-align: center;
+            right: 60px;
+            bottom: 30px;
+            width: 180px;
+            height: 36px;
+            border: 1px solid black;
+            border-radius: 20px;
+            font-size: 20px;
+            padding: 0 20px;
+            background-color: #c394ff;
+            color: white;
+            /* border-bottom: 2px solid black; */
+
+        }
+
+        .new-task::placeholder{
+            color: white;
+        }
+
+        .new-task:focus{
+            outline: none;
+
+        }
+
+        .line{
+            display: none;
+            position: absolute;
+            /* background-color: black; */
+            border: 2px solid grey;
+            /* height: 1px; */
+            left: 98px;
+            width: 60%;
+        }
+
+        .deltask{
+            width: 30px;
+            height: 30px;
+            border: 0px;
+            border-radius: 20px;
+            background-color: white;
+            /* padding-right: 30px; */
+        }
+
+        .dark-mode{
+            width: 50px;
+            height: 50px;
+            border-radius: 30px;
+            position: absolute;
+            left: 60px;
+            bottom: 25px;
+
+            border: 1px solid black;
+
+            background-color: #c394ff;
+            color: white;
+        }
+        
+
+    </style>
+
+
+</head>
+<body>
+
+    <div class="page">
+
+        <div class="heading">
+            <h1>TODO LIST</h1>
+        </div>
+    
+        <div class="container">
+            <!-- <div class="task">
+                <button class="checkbox"></button>
+                <input class="info" type="text">
+                <button class="deltask">X</button>
+            </div>
+    
+            <div class="task">
+                <button class="checkbox"></button>
+                <input class="info" type="text">
+                <div class="line"></div>
+                <button class="deltask">X</button>
+            </div>
+    
+            <div class="task">
+                <button class="checkbox"></button>
+                <input class="info" type="text">
+                <button class="deltask">X</button>
+            </div> -->
+
+        </div>
+
+        <div>
+            <input class="new-task" type="text" placeholder="Add New Task">
+            <!-- <button class="new-task">Add New Task</button> -->
+            <button class="dark-mode">
+                <img width="20px" src="assests/sun.png" alt="">
+            </button>
+        </div>
+
+    </div>
+
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>
